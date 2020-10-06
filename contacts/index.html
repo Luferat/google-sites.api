@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./contatcs.css">
+    <title>Faça Contato</title>
+</head>
+
+<body>
+
+    <form method="POST" name="contact" id="contact">
+
+        <p>Preencha os campos abaixo para entrar em contato com a equipe do <span id="siteName"></span>.</p>
+
+        <p class="center small red">* Todos os campos são obrigatórios.</p>
+
+        <input type="hidden" name="contact-send" id="contact-send" value="Ok">
+
+        <p>
+            <label for="name">Nome:</label>
+            <input type="text" name="contact-name" id="contact-name" required minlength="3" class="valid"
+                value="Joca da Silva">
+        </p>
+
+        <p>
+            <label for="email">E-mail:</label>
+            <input type="email" name="contact-email" id="contact-email" required class="valid" value="joca@gmail.com">
+        </p>
+
+        <p>
+            <label for="subject">Assunto:</label>
+            <input type="text" name="contact-subject" id="contact-subject" required minlength="3" class="valid"
+                value="Teste de contato">
+        </p>
+
+        <p>
+            <label for="message">Menssagem:</label>
+            <textarea name="contact-message" id="contact-message" required minlength="5"
+                class="valid">Teste... 1... 2... 3...</textarea>
+        </p>
+
+        <p>
+            <label for="submit"></label>
+            <button type="submit" name="contact-submit" id="contact-submit">Enviar</button>
+        </p>
+
+    </form>
+
+    <div id="feedback"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+    <script src="../fbconfig.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./contatcs.js"></script>
+</body>
+
+</html>

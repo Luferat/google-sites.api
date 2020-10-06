@@ -1,0 +1,59 @@
+label {
+  display: block;
+  padding: 0 0 0.3rem 0.5rem;
+}
+input,
+textarea,
+button {
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: none;
+  background: rgb(231, 231, 231);
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+}
+input,
+textarea {
+  width: 100%;
+}
+textarea {
+  height: 6em;
+  resize: vertical;
+}
+button {
+  background: linear-gradient(rgb(146, 182, 212), rgb(27, 76, 116));
+  color: #fff;
+  cursor: pointer;
+}
+button:hover {
+  background: linear-gradient(rgb(248, 147, 110), rgb(141, 40, 4));
+}
+button:disabled {
+  background: linear-gradient(rgb(88, 88, 88), grey);
+  color: rgb(180, 180, 180);
+  cursor: not-allowed;
+}
+
+input:invalid,
+textarea:invalid {
+  background: rgb(255, 207, 207);
+  border-bottom: 3px solid red;
+}
+input:valid,
+textarea:valid {
+  background: rgb(213, 255, 213);
+  border-bottom: 3px solid green;
+}
+#contact:invalid button {
+  pointer-events: none;
+  background: linear-gradient(rgb(88, 88, 88), grey);
+  color: rgb(219, 219, 219);
+  cursor: not-allowed;
+}
+
+#siteName {
+  font-weight: bold;
+}
+#feedback {
+  display: none;
+}
