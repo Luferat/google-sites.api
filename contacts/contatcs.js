@@ -24,7 +24,8 @@ function sendForm() {
     return false;
 }
 function feedback(name, msg) {
-    var out = `<h4>Olá ${name}!</h4>${msg}<p><em>Obrigado...</em></p>`;
+    var names = name.split(' ');
+    var out = `<h4>Olá ${names[0]}!</h4>${msg}<p><em>Obrigado...</em></p>`;
     $('#feedback').html(out);
     $('#contact').hide('fast');
     $('#feedback').show('fast');
