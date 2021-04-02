@@ -18,7 +18,7 @@ function sendForm() {
             feedback(contact.name, msg);
         })
         .catch(function (error) {
-            var msg = `<p class="danger">Ocorreu uma faha que impediu o envio do seu contato.</p><p class="danger">A equipe do site já foi avisada sobre a falha.</p><p>Por favor, tente mais tarde.</p>`;
+            var msg = `<p class="danger">Ocorreu uma falha que impediu o envio do seu contato.</p><p class="danger">A equipe do site já foi avisada sobre a falha.</p><p>Por favor, tente mais tarde.</p><p><small>${error}</small></p>`;
             feedback(contact.name, msg);
         });
     return false;
